@@ -26,7 +26,7 @@ module.exports = function calc(gd) {
 
 function calcOneAxis(calcTrace, trace, axis, coord) {
     var opts = trace['error_' + coord] || {};
-    var isVisible = (opts.visible && ['linear', 'log'].indexOf(axis.type) !== -1);
+    var isVisible = (opts.visible && ['linear', 'log', 'date'].indexOf(axis.type) !== -1);
     var vals = [];
 
     if(!isVisible) return;
